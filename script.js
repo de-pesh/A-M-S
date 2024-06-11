@@ -33,11 +33,26 @@ function login() {
             window.location.href = "/admin.html";
         } else if(loggedIn && user == 0){
             window.location.href = "/user.html";
+        } else{
+            $("#output").fadeIn(1000);
+            output.textContent = "Invalid UserId or Password";
+            output.style.background = "rgb(255, 36, 36)";
+            output.style.color = "white ";
+            output.style.boxShadow = "10px 10px 8px  #3a3a3a";
+            output.style.padding = "10px";
+            output.style.borderRadius = "20px";
+
+            setTimeout(function () {
+                hides();
+              }, 3000);
         }
             
       }).catch((error) => console.error("Error loading CSV:", error));
-      output.textContent = "Invalid UserId or Password";
+      
 }
+function hides() {
+    $("#output").fadeOut(1000);
+  }
 
 function write(){
 

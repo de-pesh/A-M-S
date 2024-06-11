@@ -11,7 +11,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form>
+        <div id="formm">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -20,9 +20,10 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" onclick="login()">Login</button>
-            <h4 id="output"></h1>
-        </form>
+            <button onclick="login()">Login</button>
+            <a href="#">Register</a>
+            <h4 id="output"></h4>
+        </div>
     </div>
  
 </body>
